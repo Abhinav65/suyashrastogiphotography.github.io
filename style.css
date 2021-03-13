@@ -1,0 +1,463 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', cursive;
+	box-sizing: border-box;
+}
+body{
+	min-height: 1000px;
+	position: relative;
+	background: black;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	padding: 0 200px;
+	background: #000;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	transition: 1s;
+}
+header.sticky{
+	height: 80px;
+}
+.banner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 1s;
+}
+.header.sticky .banner{
+	opacity: 0.5px;
+}
+.logo{
+	position: absolute;
+	top: 50%;
+	left: 56%;
+	height: 50%;
+	transform: translate(-50%, -50%); 
+	font-size: 4em;
+	color: #fff;
+	font-weight: 700;
+	transition: 1s;
+	text-decoration: none;
+	z-index: 1;
+}
+header.sticky .logo{
+	position: absolute;
+	font-size: 2em;
+	left: 100px;
+	transform: translate(0, -50%);
+}
+nav{
+	position: relative;
+	display: flex;
+	z-index: 1;
+}
+nav ul{
+	position: relative;
+	left: 100px;
+	display: flex;
+	transition: 0.25s;
+	transform: translateX(100px);
+	opacity: 0;
+}
+header.sticky nav ul{
+	transform: translateX(0);
+	opacity: 1;
+	transition-delay: 0.75s;
+	opacity: 1;
+	visibility: visible;
+}
+nav ul li{
+	list-style:none;
+}
+nav ul li a{
+	color: #fff;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	color: #ff275f;
+}
+
+.img-portfolio{
+	font-family: 'Poppins', sans-serif;
+	margin-top: 30vh;
+	padding-top: 100px;
+}
+#imgprt{
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+#gym{
+	padding: 15px;
+	font-size: 2.5em;
+	margin: 20px;
+	color: rgb(9, 234, 189);
+}
+#gym a{
+	padding: 13px 25px;
+	float: right;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+}
+#gym a:hover{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+.width{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100%;
+  width: 100%;
+}
+.image{
+}
+@media(max-width: 991px){
+	header{
+		padding: 55px;
+	}
+	#gym{
+		font-size: 1.5em !important;
+	}
+	#gym a{
+		margin-top: 0;
+		font-size: 0.51em;
+	}
+	#celebrities{
+		font-size:1.5em !important;
+	}
+	#celebrities a{
+		display: flex;
+		justify-content: center;
+		font-size:0.51em !important;
+	}
+	#imgprt{
+		display: block;
+	}
+	.prt{
+		margin-bottom: 50px;
+	}
+	#imgprt2{
+		display: block !important;
+	}
+	#imgprt3{
+		display: block !important;
+	}
+	#imgprt4{
+		display: block !important;
+	}
+	#imgprt5{
+		display: block !important;
+	}
+	#creativeshoots{
+		font-size:1.5em !important;
+	}
+	#creativeshoots a{
+		display: flex;
+		justify-content: center;
+		font-size:0.51em !important;
+	}
+	#fashion{
+		font-size:1.5em !important;
+	}
+	#fashion a{
+		display: flex;
+		justify-content: center;
+		font-size:0.51em !important;
+	}
+	#wedding{
+		font-size:1.5em !important;
+	}
+	#wedding a{
+		display: flex;
+		justify-content: center;
+		font-size:0.51em !important;
+	}
+	header.sticky .logo{
+		position: relative;
+		top: -20px;
+		left: -40px;
+	}
+	header.sticky .banner{
+		opacity: 0;
+	}
+	nav ul{
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	nav.active ul{
+		position: fixed;
+		top: 80px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 80px);
+		background: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	nav ul li a{
+		font-size: 1.5em;
+		padding: 5px 15px;
+	}
+	header.sticky .toggle{
+		position: fixed;
+		top: 30px;
+		right: 40px;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		background: #fff url(images/menu.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	header.sticky .toggle.active{
+		background: #fff url(images/close.png);
+		background-size:25px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.about-items{
+		display: block !important;
+	}
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+#scrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+}
+#progressbar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	animation: animate 5s linear infinite;
+}
+@keyframes animate{
+	0%,100%{
+		filter: hue-rotate(0deg);
+	}
+	50%{
+		filter: hue-rotate(360deg);
+	}
+}
+
+#progressbar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	filter: blur(30px);
+
+}
+#progressbar:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff, #00ffe7);
+	filter: blur(30px);
+
+}
+
+#imgprt2{
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+#celebrities{
+	padding: 15px;
+	font-size: 2.5em;
+	margin: 20px;
+	color: rgb(9, 234, 189);
+	border-top: 2px solid #03e9f4;
+}
+#celebrities a{
+	padding: 10px;
+	float: right;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+}
+#celebrities a:hover{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+#celebrities a span{
+	position: relative;
+	display: block;
+}
+#text{
+	font-size: 2.5em;
+	padding-bottom: 5px; 
+	color: rgb(9, 234, 189);
+	border-bottom: 2px solid #03e9f4;
+}
+#imgprt3{
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+#creativeshoots{
+	padding: 15px;
+	font-size: 2.5em;
+	margin: 20px;
+	color: rgb(9, 234, 189);
+	border-top: 2px solid #03e9f4;
+}
+#creativeshoots a{
+	padding: 10px;
+	float: right;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+}
+#creativeshoots a:hover{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+#imgprt4{
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+#fashion{
+	padding: 15px;
+	font-size: 2.5em;
+	margin: 20px;
+	color: rgb(9, 234, 189);
+	border-top: 2px solid #03e9f4;
+}
+#fashion a{
+	padding: 10px;
+	float: right;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+}
+#fashion a:hover{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+#imgprt5{
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 0.5fr;
+}
+#wedding{
+	padding: 15px;
+	font-size: 2.5em;
+	margin: 20px;
+	color: rgb(9, 234, 189);
+	border-top: 2px solid #03e9f4;
+}
+#wedding a{
+	padding: 10px;
+	float: right;
+	color: #03e9f4;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+}
+#wedding a:hover{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+.about-portfolio{
+	font-family: 'Poppins', sans-serif;
+	margin-top: 30vh;
+	padding-top: 100px;
+}
+.about-items{
+	width: 100%;
+	height: 400px;
+	margin-top: 25px;
+	display: grid;
+	grid-template-columns: 0.4fr 1fr;
+}
+#text2{
+	color: white;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #03e9f4
+}
+#logo2{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 400px;
+  width: 400px;
+
+}
+#me{
+	padding: 15px;
+	color: white;
+	text-align: center;
+}
