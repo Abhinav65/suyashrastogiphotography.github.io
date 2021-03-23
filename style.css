@@ -94,7 +94,7 @@ nav ul li a:hover{
 
 .img-portfolio{
 	font-family: 'Poppins', sans-serif;
-	margin-top: 30vh;
+	margin-top: 20vh;
 	padding-top: 80px;
 }
 #imgprt{
@@ -139,6 +139,28 @@ nav ul li a:hover{
 @media(max-width: 991px){
 	header{
 		padding: 55px;
+	}
+	.about-items{
+		height: 100% !important;
+		display: block !important;
+	}
+	#me{
+		padding-top: 15px !important;
+	}
+	#text2{
+		padding-top: 15px !important;
+	}
+	#logo2{
+		display: block !important;
+	}
+	#image{
+
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+	}
+	.logo{
+		font-size: 2.7em !important;
 	}
 	#gym{
 		font-size: 1.5em !important;
@@ -198,6 +220,7 @@ nav ul li a:hover{
 		font-size:0.51em !important;
 	}
 	header.sticky .logo{
+		font-size: 1.5em !important;
 		position: relative;
 		top: -20px !important;
 		left: -40px !important;
@@ -242,13 +265,7 @@ nav ul li a:hover{
 		background: #fff url(images/close.png);
 		background-size:25px;
 		background-repeat: no-repeat;
-		background-position: center;
-	}
-	.about-items{
-		display: block !important;
-	}
-	#logo2{
-		display: block !important;
+		background-position: center;4
 	}
 }
 ::-webkit-scrollbar{
