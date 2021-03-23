@@ -1,52 +1,34 @@
 *{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 body{
-	color: #03e9f4;
-	background: rgba(27,31,34, 0.85);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #000;
+	width: 100vw;
+	height: 100vh;
+	background: #ff0;
+	background-blend-mode: multiply;
 }
-.box{
-	z-index: 1;
-	position: relative;
-	width: 200px;
-	height: 200px;
-	transform-style: preserve-3d;
-	animation: animate 20s linear infinite;
+img{
+	width: 100%;
+	height: 100%;
+	border: 4px solid aqua;
 }
-	@keyframes animate{
-		0%{
-			transform: perspective(1000px) rotateY(0deg);
-		}
-		100%{
-			transform: perspective(1000px) rotateY(360deg);
-		}
-	}
-	.box a{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		transform-origin: center;
-		transform-style: preserve-3d;
-		transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
-		-webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
-	}
-	.box a img{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	.maindiv{
-		z-index: 2;
-	}
+.box1, .box2, .box3, .box4{
+	margin-bottom: 50px;
+}
+.box1{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.box2{
+	display: grid;
+	grid-template-columns: 0.5fr 0.7fr 1fr 0.5fr;
+}
+.box3{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.box4{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
